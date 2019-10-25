@@ -5,18 +5,19 @@
  */
 package car.shopping;
 
-// Import Scanner Class
+import java.util.Scanner;
 
 public class CarShopping
 {
     
-    // Create static Scanner Object call it kb
+    private static Scanner kb = new Scanner(System.kb);
 
    public static void main(String[] args)
    {
       int totalCost = 0;
       totalCost += base();
       totalCost += automaticWindows();
+      totalCost += onStarSystem();
       //TODO: call methods that you write for each feature
       //TODO: print the total cost of the vehicle
    }
@@ -39,5 +40,10 @@ public class CarShopping
    {
       System.out.print("Automatic Windows for $500? (y/n) > ");
       //...
+   }
+   
+   public static int onStarSystem()
+   {
+       System
    }
 }
