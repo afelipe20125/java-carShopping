@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class CarShopping {
 
-    private static Scanner kb = new Scanner(System.kb);
+    private static Scanner kb = new Scanner(System.in);
 
     public static void main(String[] args) {
         int totalCost = 0;
@@ -22,7 +22,10 @@ public class CarShopping {
         totalCost += sunroof();
         totalCost += heatedSeatAndWindshieldHeater();
         totalCost += GPS();
-
+        totalCost += subwoofer();
+        totalCost += performanceWheels();
+        totalCost += bulletProof();
+        System.out.println("The total cost is: $"+totalCost);
         //TODO: call methods that you write for each feature
         //TODO: print the total cost of the vehicle
     }
@@ -47,7 +50,7 @@ public class CarShopping {
     }
 
     public static int automaticWindows() {
-        System.out.print("Automatic Windows for $500? (y/n) > ");
+        System.out.print("Automatic Windows for $500? ");
        String response = kb.next();
        
        if (response.equalsIgnoreCase("yes"))
@@ -62,7 +65,7 @@ public class CarShopping {
     
     
     public static int onStarSystem() {
-        System.out.print("On star System for $1000? (y/n)");
+        System.out.print("On star System for $1000? ");
       String response = kb.next();
       
       if (response.equalsIgnoreCase("yes"))
@@ -153,4 +156,43 @@ public class CarShopping {
              return 0;
          }
      }
-}
+     
+     public static int subwoofer(){
+         System.out.println("Subwoofer for $200?");
+         String response = kb.next();
+         if (response.equalsIgnoreCase("yes"))
+         {
+             return 250;
+         }
+         else
+         {
+             return 0;
+         }
+     }
+     
+     public static int performanceWheels(){
+         System.out.println("Performance wheels for $1200?");
+         String response = kb.next();
+         if (response.equalsIgnoreCase("yes"))
+         {
+             return 1200;
+         }
+         else
+         {
+             return 0;
+         }
+     }
+     
+     public static int bulletProof (){
+         System.out.println("Bullet proof the car for $20000?");
+         String response = kb.next();
+         if (response.equalsIgnoreCase("yes"))
+         {
+             return 20000;
+         }
+         else 
+         {
+             return 0;
+         }
+       }
+     }
